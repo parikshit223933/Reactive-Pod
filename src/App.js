@@ -24,19 +24,25 @@ class App extends React.Component
             this.state.change_in_angle += dist;
             if (this.state.change_in_angle > 60)
             {
-                console.log(this.state.options[this.state.selected]);
                 this.state.selected++;
-                this.state.change_in_angle = 0;
                 this.state.selected = this.state.selected % 4;
+                this.setState({
+                    selected: this.state.selected
+                });
+
+                this.state.change_in_angle = 0;
             }
             else if (this.state.change_in_angle < -60)
             {
-                console.log(this.state.options[this.state.selected]);
                 this.state.selected--;
-                this.state.change_in_angle = 0;
                 if (this.state.selected === -1)
                     this.state.selected = 3;
+
                 this.state.selected = this.state.selected % 4;
+                this.setState({
+                    selected: this.state.selected
+                });
+                this.state.change_in_angle = 0;
             }
         });
         zt.bind(document.getElementsByClassName('center-circle')[0], 'tap', (event) =>
@@ -51,7 +57,7 @@ class App extends React.Component
     {
         return (
             <div className="App">
-                <Screen 
+                <Screen
                     selectedOption={this.state.selected}
                 />
                 <Buttons

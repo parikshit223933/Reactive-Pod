@@ -145,6 +145,11 @@ code {
     font-size:20px;
 }
 
+.screen-menu>.selected
+{
+    background-color:rgb(89, 89, 255);
+}
+
 .app-logo
 {
     background-color: #ff0053;

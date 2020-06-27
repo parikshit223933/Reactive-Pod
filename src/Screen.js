@@ -8,16 +8,13 @@ import Setting from './Screens/Setting'
 
 class Screen extends React.Component
 {
-    constructor()
-    {
-        super();
-    }
     render()
     {
-        console.log(this.props.selectedOption);
         return (
             <div className="screen-container">
-                <Menu/> 
+                <Menu
+                    selectedOption={this.props.selectedOption}
+                /> 
             </div>
         );
     }
