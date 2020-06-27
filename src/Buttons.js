@@ -10,7 +10,7 @@ const Buttons = (props) =>
                 <h2>Select</h2>
             </button>
 
-            <button className="menu-button">
+            <button className="menu-button" onClick={props.menuButtonClicked}>
                 <i className="fas fa-bars"></i>
             </button>
             <button className="left-button">
