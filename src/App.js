@@ -9,31 +9,41 @@ class App extends React.Component
     constructor()
     {
         super();
-        this.change_in_angle=0;
+        this.state = {
+            options: ['Games', 'Music', 'Settings', 'Cover Flow'],
+            change_in_angle: 0,
+            selected: 0
+        }
     }
     componentDidMount()
     {
-        var zt=new ZingTouch.Region(document.getElementsByClassName('buttons-container')[0]);
-        zt.bind(document.getElementsByClassName('buttons-container')[0], 'rotate', (event)=>
+        var zt = new ZingTouch.Region(document.getElementsByClassName('buttons-container')[0]);
+        zt.bind(document.getElementsByClassName('buttons-container')[0], 'rotate', (event) =>
         {
-            let dist=event.detail.distanceFromLast;
-            this.change_in_angle+=dist;
-            if(this.change_in_angle>15)
+            let dist = event.detail.distanceFromLast;
+            this.state.change_in_angle += dist;
+            if (this.state.change_in_angle > 60)
             {
-                console.log('clockwise');
-                this.change_in_angle=0;
+                console.log(this.state.options[this.state.selected]);
+                this.state.selected++;
+                this.state.change_in_angle = 0;
+                this.state.selected = this.state.selected % 4;
             }
-            else if(this.change_in_angle<-15)
+            else if (this.state.change_in_angle < -60)
             {
-                console.log('anti-clockwise');
-                this.change_in_angle=0;
+                console.log(this.state.options[this.state.selected]);
+                this.state.selected--;
+                this.state.change_in_angle = 0;
+                if (this.state.selected === -1)
+                    this.state.selected = 3;
+                this.state.selected = this.state.selected % 4;
             }
         });
-        zt.bind(document.getElementsByClassName('center-circle')[0], 'tap', (event)=>
+        zt.bind(document.getElementsByClassName('center-circle')[0], 'tap', (event) =>
         {
             event.stopPropagation();
         });
-        
+
     }
 
 
@@ -41,10 +51,12 @@ class App extends React.Component
     {
         return (
             <div className="App">
-                <Screen />
+                <Screen 
+                    selectedOption={this.state.selected}
+                />
                 <Buttons
-                check={this.checker}
-                centerButton={this.centerButton} 
+                    check={this.checker}
+                    centerButton={this.centerButton}
                 />
             </div>
         );
