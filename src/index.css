@@ -16,7 +16,7 @@ code {
 .App
 {
     border:2px solid black;
-    margin:2% auto 0px auto;
+    margin:1% auto 0px auto;
     width:min-content;
     padding:20px 10px 5px 10px;
 }
@@ -35,12 +35,13 @@ code {
     width: 260px;
     height: 260px;
     border: 1px solid grey;
-    margin:0px auto;
+    margin:10px auto 0px auto;
     border-radius: 50%;
     position:relative;
     display:flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(221, 221, 221);
 }
 .center-circle
 {
@@ -52,4 +53,67 @@ code {
     justify-content: center;
     align-items: center;
     color:white;
+    outline:none;
+    border:none;
+}
+
+.menu-button
+{
+    position: absolute;
+    top:0px;
+    height:25%;
+    width:50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 37% 37% 0% 0%;
+    font-size:30px;
+    outline:none;
+    border:none;
+    background-color: transparent;
+}
+.left-button
+{
+    position: absolute;
+    left:0px;
+    width:25%;
+    height:50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 37% 0% 0% 37%;
+    font-size:30px;
+    outline:none;
+    border:none;
+    background-color: transparent;
+}
+.right-button
+{
+    position: absolute;
+    right:0px;
+    width:25%;
+    height:50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0% 37% 37% 0%;
+    font-size:30px;
+    outline:none;
+    border:none;
+    background-color: transparent;
+}
+.play-pause
+{
+    position: absolute;
+    bottom:0px;
+    height:25%;
+    width:50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0% 37% 37%;
+    font-size:30px;
+    outline:none;
+    border:none;
+    background-color: transparent;
 }
