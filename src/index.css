@@ -11,3 +11,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.App
+{
+    border:2px solid black;
+    margin:2% auto 0px auto;
+    width:min-content;
+    padding:20px 10px 5px 10px;
+}
+
+/* SCREEN ///////////////////////////////////////////////////////////////////////////////////////////////// */
+.screen-container
+{
+    border:1px solid grey;
+    width:350px;
+    height:350px;
+    margin:0px auto;
+}
+/* BUTTONS //////////////////////////////////////////////////////////////////////////////////////////////// */
+.buttons-container
+{
+    width: 260px;
+    height: 260px;
+    border: 1px solid grey;
+    margin:0px auto;
+    border-radius: 50%;
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.center-circle
+{
+    width:50%;
+    height:50%;
+    background-color: rgb(90, 90, 90);
+    border-radius: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
