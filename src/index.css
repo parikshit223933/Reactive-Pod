@@ -28,6 +28,10 @@ code {
     width:350px;
     height:350px;
     margin:0px auto;
+    background-image: url('./background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 /* BUTTONS //////////////////////////////////////////////////////////////////////////////////////////////// */
 .buttons-container
@@ -71,6 +75,7 @@ code {
     outline:none;
     border:none;
     background-color: transparent;
+    color:rgb(78, 78, 78);
 }
 .left-button
 {
@@ -86,6 +91,7 @@ code {
     outline:none;
     border:none;
     background-color: transparent;
+    color:rgb(78, 78, 78);
 }
 .right-button
 {
@@ -101,6 +107,7 @@ code {
     outline:none;
     border:none;
     background-color: transparent;
+    color:rgb(78, 78, 78);
 }
 .play-pause
 {
@@ -116,4 +123,5 @@ code {
     outline:none;
     border:none;
     background-color: transparent;
+    color:rgb(78, 78, 78);
 }
