@@ -1,127 +1,153 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+		"Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
 }
 
-
-.App
-{
-    border:2px solid black;
-    margin:1% auto 0px auto;
-    width:min-content;
-    padding:20px 10px 5px 10px;
+.App {
+	border: 2px solid black;
+	margin: 1% auto 0px auto;
+	width: min-content;
+	padding: 20px 10px 5px 10px;
 }
 
 /* SCREEN ///////////////////////////////////////////////////////////////////////////////////////////////// */
-.screen-container
-{
-    border:1px solid grey;
-    width:350px;
-    height:350px;
-    margin:0px auto;
-    background-image: url('./background.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.screen-container {
+	border: 1px solid grey;
+	width: 350px;
+	height: 350px;
+	margin: 0px auto;
+	background-image: url("./background.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
 }
 /* BUTTONS //////////////////////////////////////////////////////////////////////////////////////////////// */
-.buttons-container
-{
-    width: 260px;
-    height: 260px;
-    border: 1px solid grey;
-    margin:10px auto 0px auto;
-    border-radius: 50%;
-    position:relative;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(221, 221, 221);
+.buttons-container {
+	width: 260px;
+	height: 260px;
+	border: 1px solid grey;
+	margin: 10px auto 0px auto;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(221, 221, 221);
 }
-.center-circle
-{
-    width:50%;
-    height:50%;
-    background-color: rgb(90, 90, 90);
-    border-radius: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:white;
-    outline:none;
-    border:none;
+.center-circle {
+	width: 50%;
+	height: 50%;
+	background-color: rgb(90, 90, 90);
+	border-radius: inherit;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	outline: none;
+	border: none;
 }
 
-.menu-button
-{
-    position: absolute;
-    top:0px;
-    height:25%;
-    width:50%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 37% 37% 0% 0%;
-    font-size:30px;
-    outline:none;
-    border:none;
-    background-color: transparent;
-    color:rgb(78, 78, 78);
+.menu-button {
+	position: absolute;
+	top: 0px;
+	height: 25%;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 37% 37% 0% 0%;
+	font-size: 30px;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	color: rgb(78, 78, 78);
 }
-.left-button
-{
-    position: absolute;
-    left:0px;
-    width:25%;
-    height:50%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 37% 0% 0% 37%;
-    font-size:30px;
-    outline:none;
-    border:none;
-    background-color: transparent;
-    color:rgb(78, 78, 78);
+.left-button {
+	position: absolute;
+	left: 0px;
+	width: 25%;
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 37% 0% 0% 37%;
+	font-size: 30px;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	color: rgb(78, 78, 78);
 }
-.right-button
-{
-    position: absolute;
-    right:0px;
-    width:25%;
-    height:50%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0% 37% 37% 0%;
-    font-size:30px;
-    outline:none;
-    border:none;
-    background-color: transparent;
-    color:rgb(78, 78, 78);
+.right-button {
+	position: absolute;
+	right: 0px;
+	width: 25%;
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0% 37% 37% 0%;
+	font-size: 30px;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	color: rgb(78, 78, 78);
 }
-.play-pause
+.play-pause {
+	position: absolute;
+	bottom: 0px;
+	height: 25%;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0px 0% 37% 37%;
+	font-size: 30px;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	color: rgb(78, 78, 78);
+}
+
+/* MENU /////////////////////////////////////////////////////////////////////////////////////////////////// */
+.screen-menu {
+	width: 50%;
+	height: 100%;
+	position: relative;
+	left: 0%;
+	background-color: white;
+	box-shadow: 0px 0px 12px 1px black;
+	transition: width ease-in-out 1s;
+}
+
+.screen-menu>div
 {
-    position: absolute;
-    bottom:0px;
-    height:25%;
-    width:50%;
     display:flex;
     justify-content: center;
     align-items: center;
-    border-radius: 0px 0% 37% 37%;
-    font-size:30px;
-    outline:none;
-    border:none;
-    background-color: transparent;
-    color:rgb(78, 78, 78);
+    width:100%;
+    height:20%;
+    border:1px solid rgb(190, 190, 190);
+    box-sizing: border-box;
+}
+
+.screen-menu p
+{
+    font-size:20px;
+}
+
+.app-logo
+{
+    background-color: #ff0053;
+    color:white;
+    font-size: large;
 }
