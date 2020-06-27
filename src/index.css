@@ -29,7 +29,8 @@ code {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	overflow: hidden;
+    overflow: hidden;
+    position:relative;
 }
 /* BUTTONS //////////////////////////////////////////////////////////////////////////////////////////////// */
 .buttons-container {
@@ -122,10 +123,10 @@ code {
 .screen-menu {
 	width: 0%;
 	height: 100%;
-	position: relative;
+	position: absolute;
 	left: 0%;
 	background-color: white;
-    box-shadow: 0px 0px 12px 1px rgb(82, 82, 82);
+    box-shadow: none;
     overflow-x: hidden;
 	transition: width ease-in-out 0.2s;
 }
@@ -133,6 +134,7 @@ code {
 .width-50
 {
     width:50% !important;
+    box-shadow: 0px 0px 12px 1px rgb(82, 82, 82) !important;
 }
 
 .screen-menu>div
@@ -144,6 +146,7 @@ code {
     height:20%;
     border:1px solid rgb(190, 190, 190);
     box-sizing: border-box;
+    white-space: nowrap;/* to turn off text wrapping in the screen menu */
 }
 
 .screen-menu p
@@ -163,3 +166,5 @@ code {
     color:white;
     font-size: large;
 }
+
+/* GAME SCREEN //////////////////////////////////////////////////////////////////////////////////////////// */
