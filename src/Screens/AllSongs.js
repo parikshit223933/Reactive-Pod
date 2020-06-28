@@ -1,5 +1,6 @@
 import React from 'react';
 import * as firebase from 'firebase';
+import PlayMusic from './PlayMusic';
 class AllSongs extends React.Component
 {
     constructor()
@@ -21,11 +22,14 @@ class AllSongs extends React.Component
                     await ref.getDownloadURL()
                         .then((url) =>
                         {
-                            this.new_data_array.push({ name: ref.name, url: url })
-                            this.setState({
-                                all_songs_list: this.new_data_array,
-                                loading: false
-                            });
+                            this.new_data_array.push({ name: ref.name, url: url });
+                            if (this.new_data_array.length === 6)//load the component when all the songs are added to the array.
+                            {
+                                this.setState({
+                                    all_songs_list: this.new_data_array,
+                                    loading: false
+                                });
+                            }
                         })
                         .catch((error) =>
                         {
@@ -44,7 +48,14 @@ class AllSongs extends React.Component
     }
     render()
     {
-        return (this.state.loading ? <h1>Loading</h1> :
+        if (this.props.songIndex !== -1)
+        {
+            return <PlayMusic
+                songIndex={this.props.songIndex}
+                Songs={this.state.all_songs_list}
+            />;
+        }
+        return (this.state.loading ? <h1>Loading...</h1> :
             <div className="all-songs">
                 <h1 className="all-songs-heading">
                     All Songs
@@ -52,15 +63,15 @@ class AllSongs extends React.Component
                 <div className="all-songs-list">
                     {this.state.all_songs_list.map((item, index) =>
                     {
-                        
+
                         return (
-                            <div className={this.props.currentMusicSelection==index?'selected-song':''} key={index}>
+                            <div className={this.props.currentMusicSelection === index ? 'selected-song' : ''} key={index}>
                                 {item.name}
                             </div>
                         )
                     })}
                     <div className="instruction-all-songs">
-                        use <i className="fas fa-backward"></i> and <i className="fas fa-forward"></i> buttons to navigate
+                        Use "<i className="fas fa-backward"></i>" and "<i className="fas fa-forward"></i>" buttons to navigate.
                     </div>
                 </div>
 

@@ -7,30 +7,37 @@ class Music extends React.Component
     {
         super();
         this.state={
-            audioURL:''
+            songResources:[]
         }
     }
-    UNSAFE_componentWillMount()
+
+    componentDidMount()
     {
-        firebase.storage().ref().child('music/Khairiyat-sad-(probhai.wapkiz.com).mp3').getDownloadURL()
-            .then((ans) =>
+        firebase
+            .firestore()
+            .collection('song_images')
+            .onSnapshot((snapshot)=>
             {
-                console.log()
+                const temp=snapshot.docs.map((doc)=>
+                {
+                    return doc.data();
+                });
                 this.setState({
-                    audioURL:ans
-                })
-            })
-            .catch((error) =>
-            {
-                console.log('There was an error in getting the file from the storage!', error);
-            })
+                    songResources:temp
+                });
+            });
     }
+
     render()
     {
+        console.log(this.state.songResources[this.props.songIndex]);
+        const {songIndex, Songs}=this.props;
         return (
             <div className="screen-music">
-                <h1>Music</h1>
-                <audio controls src={this.state.audioURL}></audio>
+                <h2>{Songs[songIndex].name}</h2>
+                <div className="song-image">
+                    <img src={this.state.songResources[songIndex]===undefined?'':this.state.songResources[songIndex].img_url} alt="song item"></img>
+                </div>
             </div>
         );
     }

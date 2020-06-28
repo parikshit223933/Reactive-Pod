@@ -24,8 +24,8 @@ class Screen extends React.Component
 
                 {this.props.showPage === 0 && this.props.optionsInMenu.length === 3 ? <AllSongs
                 currentMusicSelection={this.props.currentMusicSelection}
+                songIndex={this.props.songIndex}
                 /> : ''}
-                
                 {this.props.showPage === 1 && this.props.optionsInMenu.length === 3 ? <Artists /> : ''}
                 {this.props.showPage === 2 && this.props.optionsInMenu.length === 3 ? <Albums /> : ''}
             </div>

@@ -168,7 +168,7 @@ code {
     font-size: large;
 }
 
-/* GAME SCREEN //////////////////////////////////////////////////////////////////////////////////////////// */
+/* SCREENS //////////////////////////////////////////////////////////////////////////////////////////// */
 
 .screen-game
 {
@@ -202,6 +202,8 @@ code {
     box-sizing: border-box;
     overflow:hidden;
 }
+
+/* ALL SONGS SCREEN ///////////////////////////////////////////////////////////// */
 .all-songs
 {
     height:100%;
@@ -238,3 +240,28 @@ code {
 {
     background-color:rgb(255, 166, 0);
 }
+
+/* MUSIC SCREEN //////////////////////////////////////////////////////////////////////////////////////////// */
+.screen-music>h1
+{
+    margin:0px;
+    padding:5px;
+    background-image: linear-gradient(45deg, red -100%,  blue 200%);
+    color:white;
+}
+
+.song-image
+{
+    width:50%;
+    height:50%;
+    border:1px solid black;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.song-image>img
+{
+    height:100%;
+    width:100%;
+}
+
