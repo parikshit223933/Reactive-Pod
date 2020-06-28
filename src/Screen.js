@@ -14,6 +14,7 @@ class Screen extends React.Component
             <div className="screen-container">
                 <Menu
                     selectedOption={this.props.selectedOption}
+                    optionsInMenu={this.props.optionsInMenu}
                 />
                 {this.props.showPage === 0 ? <Game /> : ''}
                 {this.props.showPage === 1 ? <Music /> : ''}
