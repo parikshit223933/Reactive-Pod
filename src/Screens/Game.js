@@ -1,4 +1,5 @@
 import React from 'react';
+import * as firebase from 'firebase';
 
 class Game extends React.Component
 {
@@ -6,7 +7,7 @@ class Game extends React.Component
     {
         return (
             <div className="screen-game">
-                
+                <h1>Games</h1>
             </div>
         );
     }
