@@ -18,19 +18,11 @@ class MenuItems extends React.Component
                         )
                     })
                 }
-
-                {/* <div className={this.props.selectedOption === 0 ? 'selected' : ''}>
-                    <p>Games</p>
-                </div>
-                <div className={this.props.selectedOption === 1 ? 'selected' : ''}>
-                    <p>Music</p>
-                </div>
-                <div className={this.props.selectedOption === 2 ? 'selected' : ''}>
-                    <p>Settings</p>
-                </div>
-                <div className={this.props.selectedOption === 3 ? 'selected' : ''}>
-                    <p>Cover Flow</p>
-                </div> */}
+                {optionsInMenu.length === 3 ?
+                    <div style={{color:'green'}}>
+                        <p style={{fontSize:18}}>click "<i className="fas fa-backward"></i>" to go back</p>
+                    </div>:''
+                }
             </React.Fragment>
         )
     }
