@@ -5,8 +5,8 @@ class Setting extends React.Component
     render()
     {
         return (
-            <div>
-                <h1>setting</h1>
+            <div className="screen-setting">
+                <h1>Settings</h1>
             </div>
         );
     }

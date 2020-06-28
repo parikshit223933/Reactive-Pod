@@ -5,8 +5,8 @@ class Music extends React.Component
     render()
     {
         return (
-            <div>
-                <h1>music</h1>
+            <div className="screen-music">
+                <h1>Music</h1>
             </div>
         );
     }

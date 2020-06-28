@@ -123,7 +123,8 @@ code {
 .screen-menu {
 	width: 0%;
 	height: 100%;
-	position: absolute;
+    position: absolute;
+    z-index: 5;
 	left: 0%;
 	background-color: white;
     box-shadow: none;
@@ -168,3 +169,36 @@ code {
 }
 
 /* GAME SCREEN //////////////////////////////////////////////////////////////////////////////////////////// */
+
+.screen-game
+{
+    height:100%;
+    width:100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-sizing: border-box;
+    overflow:hidden;
+}
+.screen-music
+{
+    height:100%;
+    width:100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-sizing: border-box;
+    overflow:hidden;
+}
+.screen-setting
+{
+    height:100%;
+    width:100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-sizing: border-box;
+    overflow:hidden;
+}
+.screen-coverflow
+{
+    height:100%;
+    width:100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-sizing: border-box;
+    overflow:hidden;
+}
