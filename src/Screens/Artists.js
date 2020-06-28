@@ -1,4 +1,3 @@
-import react from 'react';
 import React from 'react';
 
 class Artists extends React.Component
