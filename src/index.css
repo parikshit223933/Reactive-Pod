@@ -226,5 +226,15 @@ code {
 {
     border:1px solid rgb(207, 207, 207);
     width:1005;
-    height:16.2%;
+    height:14%;
+}
+.instruction-all-songs
+{
+    height:20%;
+    background-color: blueviolet;
+    color:white;
+}
+.selected-song
+{
+    background-color:rgb(255, 166, 0);
 }
