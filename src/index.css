@@ -16,7 +16,9 @@ code {
 	border: 2px solid black;
 	margin: 1% auto 0px auto;
 	width: min-content;
-	padding: 20px 10px 5px 10px;
+    padding: 20px 10px 5px 10px;
+    border-radius: 20px;
+    background-color: white;
 }
 
 /* SCREEN ///////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -31,6 +33,7 @@ code {
 	background-size: cover;
     overflow: hidden;
     position:relative;
+    border-radius: 20px;
 }
 /* BUTTONS //////////////////////////////////////////////////////////////////////////////////////////////// */
 .buttons-container {
@@ -278,4 +281,43 @@ code {
 .screen-music-instruction>p
 {
     margin:0px;
+}
+
+@keyframes background-gradient-animation
+{
+    0%
+    {
+        background-color:red;
+    }
+    25%
+    {
+        background-color:green;
+    }
+    70%
+    {
+        background-color:blue;
+    }
+    100%
+    {
+        background-color: red;
+    }
+}
+
+
+.colored
+{
+    animation-name: background-gradient-animation;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    color:white;
+    opacity:0.9;
+}
+.colored svg
+{
+    color:white;
+}
+.colored .center-circle
+{
+    background-color:black;
 }

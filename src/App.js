@@ -239,12 +239,14 @@ class App extends React.Component
     {
         if ($('#audio')[0]!==undefined)
         {
-            if ($('#audio')[0].paused)
+            if ($('#audio')[0].paused)//if the music is paused i will play it, also turn on the button lights
             {
                 $('#audio')[0].play();
+                $('.buttons-container').addClass('colored');
                 return;
             }
             $('#audio')[0].pause();
+            $('.buttons-container').removeClass('colored');
         }
     }
 
