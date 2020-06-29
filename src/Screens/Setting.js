@@ -8,7 +8,7 @@ class Setting extends React.Component
             <div className="screen-setting">
                 <h1>Settings</h1>
                 <div>
-                    <i class="fas fa-cogs"></i>
+                    <i className="fas fa-cogs"></i>
                 </div>
             </div>
         );

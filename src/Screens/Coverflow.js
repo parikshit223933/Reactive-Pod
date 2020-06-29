@@ -8,7 +8,7 @@ class Coverflow extends React.Component
             <div className="screen-coverflow">
                 <h1>Cover Flow</h1>
                 <div>
-                    <i class="fas fa-photo-video"></i>
+                    <i className="fas fa-photo-video"></i>
                 </div>
             </div>
         );

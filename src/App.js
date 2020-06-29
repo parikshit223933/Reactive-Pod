@@ -265,6 +265,7 @@ class App extends React.Component
 
     rotatePod=()=>
     {
+        /* screen rotation feature */
         $('.App').toggleClass('rotate-anti-clockwise');
         $('.buttons-container').toggleClass('rotate-clockwise');
         $('.screen-container').toggleClass('rotate-clockwise');
