@@ -2,6 +2,14 @@ import React from 'react';
 
 class Music extends React.Component
 {
+    componentDidMount()
+    {
+        this.props.currentlyOnPlayMusicScreen()
+    }
+    componentWillUnmount()
+    {
+        this.props.currentlyOnPlayMusicScreen()
+    }
     render()
     {
         const {songIndex, Songs}=this.props;

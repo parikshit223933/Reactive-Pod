@@ -53,6 +53,7 @@ class AllSongs extends React.Component
             return <PlayMusic
                 songIndex={this.props.songIndex}
                 Songs={this.state.all_songs_list}
+                currentlyOnPlayMusicScreen={this.props.currentlyOnPlayMusicScreen}
             />;
         }
         return (this.state.loading ? <h1>Loading...</h1> :
