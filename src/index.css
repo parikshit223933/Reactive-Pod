@@ -33,7 +33,9 @@ code {
 	border-radius: 20px;
 	background-image: url("https://image.freepik.com/free-vector/dark-background-gradient-geometric-models_23-2148430535.jpg");
 	box-shadow: 0px 0px 12px 2px black;
-	background-size: cover;
+    background-size: cover;
+    position:relative;
+    transition: transform ease-in-out 0.2s;
 
 	animation-name: rotor-pod;
 	animation-duration: 0.5s;
@@ -53,7 +55,8 @@ code {
 	background-size: cover;
 	overflow: hidden;
 	position: relative;
-	border-radius: 20px;
+    border-radius: 20px;
+    transition: transform ease-in-out 0.2s;
 }
 /* BUTTONS //////////////////////////////////////////////////////////////////////////////////////////////// */
 .buttons-container {
@@ -66,7 +69,8 @@ code {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: rgb(221, 221, 221);
+    background-color: rgb(221, 221, 221);
+    transition: transform ease-in-out 0.2s;
 }
 .center-circle {
 	width: 50%;
@@ -196,7 +200,7 @@ code {
 	overflow: hidden;
 }
 .screen-music {
-	background-color: #ffc700;
+	background-color: #ffb500;
 	height: 100%;
 	width: 100%;
 	box-sizing: border-box;
@@ -245,10 +249,32 @@ code {
 	height: 14%;
 	color: white;
 }
+
+@keyframes highlight
+{
+    0%
+    {
+        color:orangered;
+    }
+    50%
+    {
+        color:white;
+    }
+    100%
+    {
+        color:orangered;
+    }
+}
+
 .instruction-all-songs {
 	height: 20%;
 	background-color: #17a2b8;
-	color: white;
+    color: white;
+
+    animation-name: highlight;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
 }
 .selected-song {
 	background-color: #007bff;
@@ -283,7 +309,12 @@ code {
 }
 
 .screen-music-instruction > p {
-	margin: 0px;
+    margin: 0px;
+    
+    animation-name: highlight;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
 }
 /* BUTTONS ANIMATION ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 @keyframes background-gradient-animation {
@@ -308,12 +339,13 @@ code {
 }
 
 .colored {
+    transition:background-color ease-in-out 0.2s;
 	animation-name: background-gradient-animation;
 	animation-duration: 5s;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 	color: white;
-	opacity: 0.9;
+    opacity: 0.9;
 }
 .colored svg {
 	color: white;
@@ -330,19 +362,14 @@ code {
 	width: 100%;
 	height: 100%;
 }
-.artists-screen h1 {
-	margin: 0px;
-}
 
 /* ALBUMS SCREEN */
-.albums-screen {
-	background-color: white;
-	opacity: 0.8;
-	width: 100%;
-	height: 100%;
-}
-.albums-screen h1 {
-	margin: 0px;
+.albums-screen
+{
+    background-color:white;
+    opacity:0.8;
+    width:100%;
+    height:100%;
 }
 
 /* LOADER ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -432,4 +459,40 @@ code {
 .artists-screen>div>svg
 {
     -webkit-box-reflect: below 0px -webkit-gradient(linear, right top, right bottom, from(transparent), to(rgba(255, 255, 255, 0.4)));
+}
+.albums-screen>h1
+{
+    margin:0px;
+}
+.albums-screen>div
+{
+    font-size:180px;
+    color:rgb(174, 0, 255);
+}
+.albums-screen>div>svg
+{
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, right top, right bottom, from(transparent), to(rgba(255, 255, 255, 0.4)));
+}
+
+
+/* ROTATOR //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.rotate
+{
+    position:absolute;
+    right:10%;
+    top:60%;
+    width:30px;
+    height:30px;
+    border-radius: 100%;
+    outline:none;
+    border:none;
+}
+.rotate-clockwise
+{
+    transform: rotateZ(90deg);
+}
+.rotate-anti-clockwise
+{
+    transform: rotateZ(-90deg);
 }

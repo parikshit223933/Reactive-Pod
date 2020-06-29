@@ -60,7 +60,7 @@ class AllSongs extends React.Component
             
             <div className='loading-screen'>
                 <h1>Loading...</h1>
-                <div class="loader"></div>
+                <div className="loader"></div>
                 <div>Please make sure that you are connected to the internet. Songs are fetched from the firebase storage.</div>
             </div>
             :
