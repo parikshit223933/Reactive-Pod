@@ -39,7 +39,7 @@ class App extends React.Component
                 this.temp_selected = this.temp_selected % this.state.options.length;
                 this.setState({
                     selected: this.temp_selected,
-                    song_index: -1
+                    // song_index: -1
                 });
 
                 this.temp_change_in_angle = 0;
@@ -53,7 +53,7 @@ class App extends React.Component
                 this.temp_selected = this.temp_selected % this.state.options.length;
                 this.setState({
                     selected: this.temp_selected,
-                    song_index: -1
+                    // song_index: -1
                 });
                 this.temp_change_in_angle = 0;
             }
@@ -89,9 +89,8 @@ class App extends React.Component
                 {
                     options: this.state.songs_sub_menu,
                     selected: 0,
-                    showPage: 0,
+                    showPage: -1,
                     song_index: -1,//we dont want to play any song
-                    songNavigate:0
                 }
             );
             this.temp_selected = 0;
@@ -107,7 +106,6 @@ class App extends React.Component
                     {
                         this.setState({
                             song_index: this.state.current_music_selection,//which song to play (here we want to play a song)
-                            songNavigate:0
                         });
                         this.temp_selected = 0;
                         return;
@@ -129,22 +127,22 @@ class App extends React.Component
     leftButtonClicked = () =>
     {
         /* the left button could have also been clicked to change the song which is currently being played to the previous song. */
-        if(this.state.currently_on_play_music_screen)//if i am on the play music screen
+        if (this.state.currently_on_play_music_screen)//if i am on the play music screen
         {
-            if(!document.getElementsByClassName('screen-menu')[0].classList.contains('width-50'))//if the menu is not present on the screen
+            if (!document.getElementsByClassName('screen-menu')[0].classList.contains('width-50'))//if the menu is not present on the screen
             {
                 //here i can switch to next song
-                if(this.state.song_index===0)
+                if (this.state.song_index === 0)
                 {
                     this.setState({
-                        song_index:5
+                        song_index: 5
                     });
                     return;
                 }
-                if(this.state.song_index!==-1)
+                if (this.state.song_index !== -1)
                 {
                     this.setState({
-                        song_index:this.state.song_index-1
+                        song_index: this.state.song_index - 1
                     });
                     return;
                 }
@@ -183,22 +181,22 @@ class App extends React.Component
     rightButtonClicked = () =>
     {
         /* the right button could have also been clicked to change the song which is currently being played to the next song. */
-        if(this.state.currently_on_play_music_screen)//if i am on the play music screen
+        if (this.state.currently_on_play_music_screen)//if i am on the play music screen
         {
-            if(!document.getElementsByClassName('screen-menu')[0].classList.contains('width-50'))//if the menu is not present on the screen
+            if (!document.getElementsByClassName('screen-menu')[0].classList.contains('width-50'))//if the menu is not present on the screen
             {
                 //here i can switch to next song
-                if(this.state.song_index===5)
+                if (this.state.song_index === 5)
                 {
                     this.setState({
-                        song_index:0
+                        song_index: 0
                     });
                     return;
                 }
-                if(this.state.song_index!==-1)
+                if (this.state.song_index !== -1)
                 {
                     this.setState({
-                        song_index:this.state.song_index+1
+                        song_index: this.state.song_index + 1
                     });
                     return;
                 }
@@ -239,16 +237,20 @@ class App extends React.Component
 
     playPauseButtonClicked = () =>
     {
-        if ($('#audio')[0].paused)
+        if ($('#audio')[0]!==undefined)
         {
-            $('#audio')[0].play();
-            return;
+            if ($('#audio')[0].paused)
+            {
+                $('#audio')[0].play();
+                return;
+            }
+            $('#audio')[0].pause();
         }
-        $('#audio')[0].pause();
     }
 
     render()
     {
+        console.log(this.state.currently_on_play_music_screen, this.state.selected, this.state.showPage, this.state.song_index, this.state.current_music_selection);
         return (
             <div className="App">
                 <Screen
@@ -259,7 +261,7 @@ class App extends React.Component
                     songIndex={this.state.song_index}
                     currentlyOnPlayMusicScreen={this.currentlyOnPlayMusicScreen}
                     playPauseButtonClicked={this.playPauseButtonClicked}
-                    
+
                 />
                 <Buttons
                     check={this.checker}

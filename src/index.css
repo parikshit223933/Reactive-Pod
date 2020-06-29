@@ -215,13 +215,14 @@ code {
 .all-songs-heading
 {
     padding-bottom:10px;
-    background-color: rgb(255, 51, 0);
+    background-color: #6610f2;
     margin:0px;
-    opacity:0.8;
     height:10%;
+    color:white;
 }
 .all-songs-list
 {
+    background-color: #343a40;
     height:86%;
 }
 .all-songs-list>div
@@ -229,16 +230,17 @@ code {
     border:1px solid rgb(207, 207, 207);
     width:1005;
     height:14%;
+    color:white;
 }
 .instruction-all-songs
 {
     height:20%;
-    background-color: blueviolet;
+    background-color:#17a2b8;
     color:white;
 }
 .selected-song
 {
-    background-color:rgb(255, 166, 0);
+    background-color:#007bff;
 }
 
 /* MUSIC SCREEN //////////////////////////////////////////////////////////////////////////////////////////// */
@@ -271,4 +273,9 @@ code {
 #audio
 {
     outline:none;
+}
+
+.screen-music-instruction>p
+{
+    margin:0px;
 }
