@@ -9,6 +9,9 @@ class Albums extends React.Component
                 <h1>
                     Albums
                 </h1>
+                <div>
+                    <i class="fas fa-icons"></i>
+                </div>
             </div>
         )
 

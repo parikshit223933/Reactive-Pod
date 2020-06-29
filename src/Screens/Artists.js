@@ -9,6 +9,9 @@ class Artists extends React.Component
                 <h1>
                     Artists
                 </h1>
+                <div>
+                    <i class="far fa-smile"></i>
+                </div>
             </div>
         )
 

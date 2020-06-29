@@ -381,3 +381,55 @@ code {
 
 /* IMAGES FOR EMPTY PAGES /////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
+.screen-game>div
+{
+    font-size:180px;
+    color:red;
+}
+.screen-game h1
+{
+    margin:0px;
+}
+.screen-game>div>svg
+{
+    -webkit-box-reflect: below -68px -webkit-gradient(linear, right top, right bottom, from(transparent), to(rgba(255, 255, 255, 0.4)));
+}
+.screen-setting>h1
+{
+    margin:0px;
+}
+.screen-setting>div
+{
+    font-size:150px;
+    color:rgb(134, 134, 134);
+}
+.screen-setting>div>svg
+{
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, right top, right bottom, from(transparent), to(rgba(255, 255, 255, 0.4)));
+}
+.screen-coverflow>h1
+{       
+    margin:0px;
+}
+.screen-coverflow>div
+{
+    font-size:150px;
+    color:rgb(255, 145, 0);
+}
+.screen-coverflow>div>svg
+{
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, right top, right bottom, from(transparent), to(rgba(255, 255, 255, 0.4)));
+}
+.artists-screen>h1
+{
+    margin:0px;
+}
+.artists-screen>div
+{
+    font-size:180px;
+    color:rgb(174, 0, 255);
+}
+.artists-screen>div>svg
+{
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, right top, right bottom, from(transparent), to(rgba(255, 255, 255, 0.4)));
+}
