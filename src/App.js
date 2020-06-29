@@ -170,6 +170,10 @@ class App extends React.Component
         }
     }
 
+    playPauseButtonClicked=()=>
+    {
+        $('#audio')[0].play();
+    }
 
     render()
     {
@@ -189,6 +193,7 @@ class App extends React.Component
                     selectButtonClicked={this.selectButtonClicked}
                     leftButtonClicked={this.leftButtonClicked}
                     rightButtonClicked={this.rightButtonClicked}
+                    playPauseButtonClicked={this.playPauseButtonClicked}
                 />
             </div>
         );

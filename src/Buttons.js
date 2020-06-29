@@ -19,7 +19,7 @@ const Buttons = (props) =>
             <button className="right-button" onClick={props.rightButtonClicked}>
                 <i className="fas fa-forward"></i>
             </button>
-            <button className="play-pause">
+            <button className="play-pause" onClick={props.playPauseButtonClicked}>
                 <i className="fas fa-play"></i>/<i className="fas fa-pause"></i>
             </button>
         </div>
