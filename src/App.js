@@ -146,6 +146,7 @@ class App extends React.Component
                     this.setState({
                         song_index:this.state.song_index-1
                     });
+                    return;
                 }
             }
         }
@@ -257,6 +258,7 @@ class App extends React.Component
                     currentMusicSelection={this.state.current_music_selection}
                     songIndex={this.state.song_index}
                     currentlyOnPlayMusicScreen={this.currentlyOnPlayMusicScreen}
+                    playPauseButtonClicked={this.playPauseButtonClicked}
                     
                 />
                 <Buttons

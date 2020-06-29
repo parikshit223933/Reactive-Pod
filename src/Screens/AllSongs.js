@@ -54,6 +54,7 @@ class AllSongs extends React.Component
                 songIndex={this.props.songIndex}
                 Songs={this.state.all_songs_list}
                 currentlyOnPlayMusicScreen={this.props.currentlyOnPlayMusicScreen}
+                playPauseButtonClicked={this.props.playPauseButtonClicked}
             />;
         }
         return (this.state.loading ? <h1>Loading...</h1> :
