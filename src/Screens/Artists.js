@@ -5,7 +5,7 @@ class Artists extends React.Component
     render()
     {
         return (
-            <div>
+            <div className="artists-screen">
                 <h1>
                     Artists
                 </h1>

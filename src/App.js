@@ -225,6 +225,7 @@ class App extends React.Component
     {
         if (this.state.currently_on_play_music_screen)
         {
+            $('.buttons-container').removeClass('colored');
             this.setState({
                 currently_on_play_music_screen: false
             });
@@ -252,7 +253,6 @@ class App extends React.Component
 
     render()
     {
-        console.log(this.state.currently_on_play_music_screen, this.state.selected, this.state.showPage, this.state.song_index, this.state.current_music_selection);
         return (
             <div className="App">
                 <Screen

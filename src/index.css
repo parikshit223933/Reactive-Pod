@@ -5,6 +5,11 @@ body {
 		"Helvetica Neue", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	background-image: url("./3624579.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
 }
 
 code {
@@ -12,18 +17,33 @@ code {
 		monospace;
 }
 
+@keyframes rotor-pod {
+	0% {
+		transform: rotateZ(0deg);
+	}
+	100% {
+		transform: rotateZ(360deg);
+	}
+}
+
 .App {
-	border: 2px solid black;
 	margin: 1% auto 0px auto;
 	width: min-content;
-    padding: 20px 10px 5px 10px;
-    border-radius: 20px;
-    background-color: white;
+	padding: 20px 10px 5px 10px;
+	border-radius: 20px;
+	background-image: url("https://image.freepik.com/free-vector/dark-background-gradient-geometric-models_23-2148430535.jpg");
+	box-shadow: 0px 0px 12px 2px black;
+	background-size: cover;
+
+	animation-name: rotor-pod;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: ease-in-out;
 }
 
 /* SCREEN ///////////////////////////////////////////////////////////////////////////////////////////////// */
 .screen-container {
-	border: 1px solid grey;
 	width: 350px;
 	height: 350px;
 	margin: 0px auto;
@@ -31,9 +51,9 @@ code {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-    overflow: hidden;
-    position:relative;
-    border-radius: 20px;
+	overflow: hidden;
+	position: relative;
+	border-radius: 20px;
 }
 /* BUTTONS //////////////////////////////////////////////////////////////////////////////////////////////// */
 .buttons-container {
@@ -126,198 +146,238 @@ code {
 .screen-menu {
 	width: 0%;
 	height: 100%;
-    position: absolute;
-    z-index: 5;
+	position: absolute;
+	z-index: 5;
 	left: 0%;
 	background-color: white;
-    box-shadow: none;
-    overflow-x: hidden;
+	box-shadow: none;
+	overflow-x: hidden;
 	transition: width ease-in-out 0.2s;
 }
 
-.width-50
-{
-    width:50% !important;
-    box-shadow: 0px 0px 12px 1px rgb(82, 82, 82) !important;
+.width-50 {
+	width: 50% !important;
+	box-shadow: 0px 0px 12px 1px rgb(82, 82, 82) !important;
 }
 
-.screen-menu>div
-{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width:100%;
-    height:20%;
-    border:1px solid rgb(190, 190, 190);
-    box-sizing: border-box;
-    white-space: nowrap;/* to turn off text wrapping in the screen menu */
+.screen-menu > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 20%;
+	border: 1px solid rgb(190, 190, 190);
+	box-sizing: border-box;
+	white-space: nowrap; /* to turn off text wrapping in the screen menu */
 }
 
-.screen-menu p
-{
-    font-size:20px;
-    overflow-wrap: normal;
+.screen-menu p {
+	font-size: 20px;
+	overflow-wrap: normal;
 }
 
-.screen-menu>.selected
-{
-    background-color:rgb(89, 89, 255);
+.screen-menu > .selected {
+	background-color: rgb(89, 89, 255);
 }
 
-.app-logo
-{
-    background-color: #ff0053;
-    color:white;
-    font-size: large;
+.app-logo {
+	background-color: #ff0053;
+	color: white;
+	font-size: large;
 }
 
 /* SCREENS //////////////////////////////////////////////////////////////////////////////////////////// */
 
-.screen-game
-{
-    height:100%;
-    width:100%;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-sizing: border-box;
-    overflow:hidden;
+.screen-game {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.9);
+	box-sizing: border-box;
+	overflow: hidden;
 }
-.screen-music
-{
-    background-color: #ffc700;
-    height:100%;
-    width:100%;
-    box-sizing: border-box;
-    overflow:hidden;
+.screen-music {
+	background-color: #ffc700;
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+	overflow: hidden;
 }
-.screen-setting
-{
-    height:100%;
-    width:100%;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-sizing: border-box;
-    overflow:hidden;
+.screen-setting {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.9);
+	box-sizing: border-box;
+	overflow: hidden;
 }
-.screen-coverflow
-{
-    height:100%;
-    width:100%;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-sizing: border-box;
-    overflow:hidden;
+.screen-coverflow {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.9);
+	box-sizing: border-box;
+	overflow: hidden;
 }
 
 /* ALL SONGS SCREEN ///////////////////////////////////////////////////////////// */
-.all-songs
-{
-    height:100%;
-    width:100%;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-sizing: border-box;
-    overflow:hidden;
+.all-songs {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.9);
+	box-sizing: border-box;
+	overflow: hidden;
 }
-.all-songs-heading
-{
-    padding-bottom:10px;
-    background-color: #6610f2;
-    margin:0px;
-    height:10%;
-    color:white;
+.all-songs-heading {
+	padding-bottom: 10px;
+	background-color: #6610f2;
+	margin: 0px;
+	height: 10%;
+	color: white;
 }
-.all-songs-list
-{
-    background-color: #343a40;
-    height:86%;
+.all-songs-list {
+	background-color: #343a40;
+	height: 86%;
 }
-.all-songs-list>div
-{
-    border:1px solid rgb(207, 207, 207);
-    width:1005;
-    height:14%;
-    color:white;
+.all-songs-list > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid rgb(0, 0, 0);
+	width: 1005;
+	height: 14%;
+	color: white;
 }
-.instruction-all-songs
-{
-    height:20%;
-    background-color:#17a2b8;
-    color:white;
+.instruction-all-songs {
+	height: 20%;
+	background-color: #17a2b8;
+	color: white;
 }
-.selected-song
-{
-    background-color:#007bff;
+.selected-song {
+	background-color: #007bff;
 }
 
 /* MUSIC SCREEN //////////////////////////////////////////////////////////////////////////////////////////// */
-.screen-music>h2
-{
-    background-color: rgb(66, 66, 66);
-    margin:0px;
-    margin-bottom:10px;
-    padding:10px;
-    color:white !important;
+.screen-music > h2 {
+	background-color: rgb(66, 66, 66);
+	margin: 0px;
+	margin-bottom: 10px;
+	padding: 10px;
+	color: white !important;
 }
 
-.song-image
-{
-    width:50%;
-    height:50%;
-    margin-left:auto;
-    box-shadow: 0px 0px 12px 5px grey;
-    margin-right:auto;
-    border-radius: 20px;
+.song-image {
+	width: 50%;
+	height: 50%;
+	margin-left: auto;
+	box-shadow: 0px 0px 12px 5px grey;
+	margin-right: auto;
+	border-radius: 20px;
 }
 
-.song-image>img
-{
-    border-radius: inherit;
-    height:100%;
-    width:100%;
+.song-image > img {
+	border-radius: inherit;
+	height: 100%;
+	width: 100%;
 }
 
-#audio
-{
-    outline:none;
+#audio {
+	outline: none;
 }
 
-.screen-music-instruction>p
-{
-    margin:0px;
+.screen-music-instruction > p {
+	margin: 0px;
+}
+/* BUTTONS ANIMATION ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+@keyframes background-gradient-animation {
+	0% {
+		background-color: #ff1d58;
+	}
+	20% {
+		background-color: #f75990;
+	}
+	40% {
+		background-color: #fff685;
+	}
+	60% {
+		background-color: #00ddff;
+	}
+	80% {
+		background-color: #0049b7;
+	}
+	100% {
+		background-color: #ff1d58;
+	}
 }
 
-@keyframes background-gradient-animation
-{
-    0%
-    {
-        background-color:red;
-    }
-    25%
-    {
-        background-color:green;
-    }
-    70%
-    {
-        background-color:blue;
-    }
-    100%
-    {
-        background-color: red;
-    }
+.colored {
+	animation-name: background-gradient-animation;
+	animation-duration: 5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	color: white;
+	opacity: 0.9;
+}
+.colored svg {
+	color: white;
+}
+.colored .center-circle {
+	background-color: black;
 }
 
+/* ARTISTS SCREEN ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-.colored
-{
-    animation-name: background-gradient-animation;
-    animation-duration: 4s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    color:white;
-    opacity:0.9;
+.artists-screen {
+	background-color: white;
+	opacity: 0.8;
+	width: 100%;
+	height: 100%;
 }
-.colored svg
-{
-    color:white;
+.artists-screen h1 {
+	margin: 0px;
 }
-.colored .center-circle
-{
-    background-color:black;
+
+/* ALBUMS SCREEN */
+.albums-screen {
+	background-color: white;
+	opacity: 0.8;
+	width: 100%;
+	height: 100%;
 }
+.albums-screen h1 {
+	margin: 0px;
+}
+
+/* LOADER ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.loader {
+	border: 16px solid #f3f3f3; /* Light grey */
+	border-top: 16px solid #3498db; /* Blue */
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	animation: spin 2s linear infinite;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.loading-screen {
+	background-color: white;
+	opacity: 0.8;
+	width: 100%;
+	height: 100%;
+}
+
+.loading-screen h1 {
+	margin: 0px;
+	font-size: 50px;
+}
+
+/* IMAGES FOR EMPTY PAGES /////////////////////////////////////////////////////////////////////////////////////////////////////// */
+

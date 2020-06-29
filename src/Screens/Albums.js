@@ -5,7 +5,7 @@ class Albums extends React.Component
     render()
     {
         return (
-            <div>
+            <div className="albums-screen">
                 <h1>
                     Albums
                 </h1>
