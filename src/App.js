@@ -87,6 +87,10 @@ class App extends React.Component
 
     selectButtonClicked = () =>
     {
+        if(this.state.currently_on_play_music_screen&&!document.getElementsByClassName('screen-menu')[0].classList.contains('width-50'))//if i am currently on the play music screen and the side bar is hidden, in that case if i click on the select button, ideally nothing should happen.
+        {
+            return;
+        }
         if (this.state.selected === 1 && this.state.options.length === 4)
         {
             this.setState(
