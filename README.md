@@ -1,4 +1,8 @@
 # Reactive Pod
+<img src="	https://img.shields.io/github/issues/parikshit223933/Reactive-Pod"> <img src="https://img.shields.io/badge/Dev-Complete-brightgreen">
+
+(https://parikshit223933.github.io/Reactive-Pod/)
+
 > A Virtual i-pod using React JS.
 
 ## Tools Used
